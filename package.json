@@ -17,5 +17,8 @@
     "gulp-webp": "^4.0.1",
     "reset-css": "^5.0.1",
     "sass": "^1.63.6"
+  },
+  "dependencies": {
+    "slick-carousel": "^1.8.1"
   }
 }

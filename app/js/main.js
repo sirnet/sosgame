@@ -1,3 +1,4 @@
+
 function onEntry (entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
@@ -41,3 +42,102 @@ lineList.addEventListener('click', (e) => {
     j=0;
   }
 });
+
+let featuresList = document.querySelectorAll(".features-item");
+let featuresLine = document.querySelector(".features-line");
+
+
+for (let i = 0; i < featuresList.length; i++){
+    const list = featuresList[i];
+    list.addEventListener('click', (e) => {
+      for (let j = 0; j < featuresList.length; j++){
+        featuresList[j].classList.remove("features-item--active");
+        featuresList[j].children[1].classList.remove("features-lead--active");
+      }
+      list.classList.add("features-item--active");
+      list.children[1].classList.add("features-lead--active");
+      console.log(parseInt(list.offsetTop));
+      const height = 'height: ' + parseInt(list.offsetTop) + 'px';
+      featuresLine.setAttribute('style', height);
+    });
+}
+
+var swiper = new Swiper('.mySwiper', {
+  // Install Plugin To Swiper
+  modules: [myPlugin],
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  // Enable debugger
+  debugger: true,
+});
+
+
+function myPlugin({ swiper, extendParams, on }) {
+  extendParams({
+    debugger: false,
+  });
+
+  on('init', () => {
+    if (!swiper.params.debugger) return;
+    console.log('init');
+  });
+  on('click', (swiper, e) => {
+    if (!swiper.params.debugger) return;
+    console.log('click');
+  });
+  on('tap', (swiper, e) => {
+    if (!swiper.params.debugger) return;
+    console.log('tap');
+  });
+  on('doubleTap', (swiper, e) => {
+    if (!swiper.params.debugger) return;
+    console.log('doubleTap');
+  });
+  on('sliderMove', (swiper, e) => {
+    if (!swiper.params.debugger) return;
+    console.log('sliderMove');
+  });
+  on('slideChange', () => {
+    if (!swiper.params.debugger) return;
+    console.log(
+      'slideChange',
+      swiper.previousIndex,
+      '->',
+      swiper.activeIndex
+    );
+  });
+  on('slideChangeTransitionStart', () => {
+    if (!swiper.params.debugger) return;
+    console.log('slideChangeTransitionStart');
+  });
+  on('slideChangeTransitionEnd', () => {
+    if (!swiper.params.debugger) return;
+    console.log('slideChangeTransitionEnd');
+  });
+  on('transitionStart', () => {
+    if (!swiper.params.debugger) return;
+    console.log('transitionStart');
+  });
+  on('transitionEnd', () => {
+    if (!swiper.params.debugger) return;
+    console.log('transitionEnd');
+  });
+  on('fromEdge', () => {
+    if (!swiper.params.debugger) return;
+    console.log('fromEdge');
+  });
+  on('reachBeginning', () => {
+    if (!swiper.params.debugger) return;
+    console.log('reachBeginning');
+  });
+  on('reachEnd', () => {
+    if (!swiper.params.debugger) return;
+    console.log('reachEnd');
+  });
+}

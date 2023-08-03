@@ -18,25 +18,133 @@
             </div>
             <div class="about-gallery element-animation">
                 <div class="slider">
-                    <a href="#" class="slider-btn-left"></a>
-                    <ul class="slider__lest">
-                        <li class="slider__item">
-                            <img src="img/slide1.webp" alt=""></li>
-                        <li class="slider__item element-animation">
-                            <img src="img/slide2.webp" alt=""></li>
-                        <li class="slider__item element-animation">
-                            <img src="img/slide3.webp" alt=""></li>
-                    </ul>
-                    <a href="#" class="slider-btn-right">
-                        <svg width="18" height="38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 1.87v34l14-16.81L2 1.87z" stroke="#fff" stroke-width="3.365" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </a>
+                    <div class="swiper mySwiper">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper slider__lest">
+                          <!-- Slides -->
+                          <div class="swiper-slide"> <img src="img/slide1.webp" alt=""></li></div>
+                          <div class="swiper-slide"><img src="img/slide2.webp" alt=""></div>
+                          <div class="swiper-slide"><img src="img/slide3.webp" alt=""></div>
+                          ...
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                      
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                      
+                        <!-- If we need scrollbar -->
+                        <div class="swiper-scrollbar"></div>
+                      </div>
                 </div>
-                <ul class="point-list splide__list">
-                    <li class="point-item splide__slide"><a href="#" class="point-link"></a></li>
-                    <li class="point-item splide__slide"><a href="#" class="point-link"></a></li>
-                    <li class="point-item splide__slide"><a href="#" class="point-link"></a></li>
+            </div>
+        </section>
+        <section class="features">
+            <img src="img/features.jpg" alt="">
+            <div class="features-wrap element-animation">
+                <h3 class="features-text">What’s so special?</h3>
+                <h1 class="features-title">features</h1>
+                <ul class="features-list">
+                    <div class="features-line"></div>
+                    <li class="features-item features-item--active">
+                        <h2 class="feature-desc">SURVIVE AT ALL COSTS</h2>
+                        <p class="features-lead features-lead--active">You have 30 minutes to find a relic, signal for extraction, and grab
+                            one of three spots on the rescue chopper.</p>
+                    </li>
+                    <li class="features-item">
+                        <h2 class="feature-desc">CREATE ALLIES & ENEMIES</h2>
+                        <p class="features-lead">You have 30 minutes to find a relic, signal for extraction, and grab
+                            one of three spots on the rescue chopper.</p>
+                    </li>
+                    <li class="features-item">
+                        <h2 class="feature-desc">IMPRESS THE AUDIENCE</h2>
+                        <p class="features-lead">You have 30 minutes to find a relic, signal for extraction, and grab
+                            one of three spots on the rescue chopper.</p>
+                    </li>
                 </ul>
-                <div class="point-line"></div>
+            </div>
+        </section>
+        <section class="requirements">
+            <img src="img/requirements.webp" alt="">
+            <h3 class="requirements-subject element-animation">Can My Computer Run this game?</h3>
+            <h2 class="requirements-title element-animation">system requirements</h2>
+            <div class="requirements-wrap">
+                <table class="requirements-table element-animation">
+                    <tbody>
+                        <tr>
+                            <th><span>OS:</span>Windows 7 64-bit only <br>(No OSX support at this time)</th>
+                            <th><span>PROCESSOR:</span>Intel Core 2 Duo @ 2.4 GHZ<br> or AMD Athlon X2 @ 2.8 GHZ
+                            </th>
+                        </tr>
+                        <tr>
+                            <th><span>MEMORY:</span>8GB RAM</th>
+                            <th><span>storage:</span>8GB available space</th>
+                        </tr>
+                        <tr>
+                            <td>
+                            <span>GRAPHICS:</span>
+                            NVIDIA GeForce GTX 660 2GB or
+                                AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="quotes">
+            <div class="quotes-wrap-left element-animation">
+                <h3 class="quotes-subject">What people think?</h3>
+                <h2 class="quotes-title">Press quotes</h2>
+                <p class="quotes-desc">Our goal is to create a product and service that you’re 
+                    satisfied with and use it every day. This is why we’re constantly working on our 
+                    services to make it better every day and really listen to what our users has to say.</p>
+                <button class="quotes-btn">Read more testimonials</button>
+            </div>
+            <div class="quotes-wrap-right element-animation">
+                <ul class="quotes-list">
+                    <li class="quotes-item">
+                        <div class="quotes-item__wrap">
+                            <img src="img/photo1.webp" alt="">
+                            <p>evan lahti <span>PC Gamer</span></p>
+                        </div>
+                        <p class="quotes-item__desc">“One of my gaming highlights of the year.”</p>
+                        <p class="quotes-item__text">October 18, 2018</p>
+                    </li>
+                    <li class="quotes-item">
+                        <div class="quotes-item__wrap">
+                            <img src="img/photo2.webp" alt="">
+                            <p>evan lahti <span>Nerdreactor
+                            </span></p>
+                        </div>
+                        <p class="quotes-item__desc">“One of my gaming highlights of the year.”</p>
+                        <p class="quotes-item__text">October 18, 2018</p>
+                    </li>
+                    <li class="quotes-item">
+                        <div class="quotes-item__wrap">
+                            <img src="img/photo3.webp" alt="">
+                            <p>Aaron Williams <span>Uproxx</span></p>
+                        </div>
+                        <p class="quotes-item__desc">“Snoop Dogg Playing The Wildly Entertaining ‘SOS’ Is Ridiculous.”</p>
+                        <p class="quotes-item__text">December 24, 2018</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="newsletter">
+            <div class="newsletter-wrap element-animation">
+                <h3 class="newsletter-subject">Want to stay in touch?</h3>
+                <h2 class="newsletter-title">newsletter SUBSCRIBE </h2>
+                <p class="newsletter-desc">In order to start receiving our news, all you have to do is 
+                    enter your email address. Everything else will be taken care of by us. We will send
+                     you emails containing information about game. We don’t spam.</p>
+                <form class="newsletter-form" action="newsletter-form" method="get">
+                    <label for="email">
+                        <span>Your email address</span>
+                        <input type="email" name="email">
+                    </label>
+                    <button>Subscribe now</button>
+                </form>
             </div>
         </section>
     </div>
